@@ -11,6 +11,7 @@ import Charts
 
 class ViewController: NSViewController {
     @IBOutlet var scatterChartView: ScatterChartView!
+    @IBOutlet var colorPicker: NSColorPicker!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,6 +33,11 @@ class ViewController: NSViewController {
         self.scatterChartView.xAxis.drawGridLinesEnabled = false
         self.scatterChartView.xAxis.labelPosition = .bottom
         // Do any additional setup after loading the view.
+        
+        let colorPanel = NSColorPanel.shared
+        colorPanel.setTarget(self)
+        colorPanel.setAction(#selector(printColor))
+
     }
 
     @IBAction func saveDocument(_ sender: AnyObject) {
@@ -83,12 +89,18 @@ class ViewController: NSViewController {
         }
     }
     
+
+    
+    @objc func printColor(notfication: NSNotification) {
+        let color = notification
+        print("Color picker chose ")
+    }
+    
     override var representedObject: Any? {
         didSet {
         // Update the view, if already loaded.
         }
     }
-
 
 }
 
