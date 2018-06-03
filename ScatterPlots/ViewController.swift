@@ -13,20 +13,12 @@ class ViewController: NSViewController {
     @IBOutlet var scatterChartView: ScatterChartView!
     @IBOutlet var colorPicker: NSColorPicker!
     
+    var plot = ScatterPlot()
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        let points = (1...200).map { _ -> ChartDataEntry in
-            return ChartDataEntry(x: Double(arc4random() % 200), y: Double(arc4random() % 200))
-            
-        }
         
-        let data = ScatterChartData()
-        let chartData = ScatterChartDataSet(values: points)
-        chartData.colors = [NSUIColor.red]
-        chartData.setScatterShape(.circle)
-        data.addDataSet(chartData)
-        self.scatterChartView.data = data
+
+        self.scatterChartView.data = plot.data
         self.scatterChartView.gridBackgroundColor = NSUIColor.clear
         self.scatterChartView.rightAxis.enabled = false
         self.scatterChartView.leftAxis.drawGridLinesEnabled = false
@@ -36,7 +28,7 @@ class ViewController: NSViewController {
         
         let colorPanel = NSColorPanel.shared
         colorPanel.setTarget(self)
-        colorPanel.setAction(#selector(printColor))
+        colorPanel.setAction(#selector(setMarkerColor))
 
     }
 
@@ -89,11 +81,10 @@ class ViewController: NSViewController {
         }
     }
     
-
     
-    @objc func printColor(notfication: NSNotification) {
-        let color = notification
-        print("Color picker chose ")
+    @objc func setMarkerColor(notification: NSColorPanel) {
+        plot.dataSet.colors = [notification.color]
+        scatterChartView.display()
     }
     
     override var representedObject: Any? {

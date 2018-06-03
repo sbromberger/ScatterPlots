@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3BB063BB20C1F046001DB089 /* WindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BB063BA20C1F046001DB089 /* WindowController.swift */; };
+		3BB063BE20C35493001DB089 /* ScatterChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BB063BD20C35493001DB089 /* ScatterChart.swift */; };
 		5D0DC8D220C1083F005E856C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D0DC8D120C1083F005E856C /* AppDelegate.swift */; };
 		5D0DC8D420C1083F005E856C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D0DC8D320C1083F005E856C /* ViewController.swift */; };
 		5D0DC8D620C10841005E856C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5D0DC8D520C10841005E856C /* Assets.xcassets */; };
@@ -56,6 +57,7 @@
 
 /* Begin PBXFileReference section */
 		3BB063BA20C1F046001DB089 /* WindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindowController.swift; sourceTree = "<group>"; };
+		3BB063BD20C35493001DB089 /* ScatterChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScatterChart.swift; sourceTree = "<group>"; };
 		5D0DC8CE20C1083F005E856C /* ScatterPlots.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ScatterPlots.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D0DC8D120C1083F005E856C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5D0DC8D320C1083F005E856C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -101,6 +103,7 @@
 				5D0DC8D120C1083F005E856C /* AppDelegate.swift */,
 				3BB063BA20C1F046001DB089 /* WindowController.swift */,
 				5D0DC8D320C1083F005E856C /* ViewController.swift */,
+				3BB063BD20C35493001DB089 /* ScatterChart.swift */,
 				5D0DC8D520C10841005E856C /* Assets.xcassets */,
 				5D0DC8D720C10841005E856C /* Main.storyboard */,
 				5D0DC8DA20C10841005E856C /* Info.plist */,
@@ -214,6 +217,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5D0DC8D420C1083F005E856C /* ViewController.swift in Sources */,
+				3BB063BE20C35493001DB089 /* ScatterChart.swift in Sources */,
 				3BB063BB20C1F046001DB089 /* WindowController.swift in Sources */,
 				5D0DC8D220C1083F005E856C /* AppDelegate.swift in Sources */,
 			);
